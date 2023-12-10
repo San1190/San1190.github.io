@@ -48,11 +48,13 @@ h2 {
 
 .descripcion-img img {
     max-width: 100px; 
-    border-radius: 10px; 
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out; 
 }
 
 .descripcion-texto {
     text-align: left; 
+    
 }
 
 
@@ -95,7 +97,10 @@ h2 {
 }
 
 
-
+.proyectos-metas h1 {
+    text-align: center;
+    color: darkmagenta;
+}
 
 .bot-section {
     max-width: 800px;
@@ -181,3 +186,21 @@ h2 {
     max-width: 30px; 
     margin-right: 10px;
 }
+/* Amplía la imagen al hacer clic */
+.imagen-ampliable.ampliada {
+    max-width: 400px;
+}
+
+/* Agrega estilos para elementos movibles al pasar el ratón */
+.elemento-movible {
+    transition: transform 0.3s ease-in-out;
+}
+/* Añade estilos para elementos movibles al pasar el ratón en la sección de habilidades */
+.habilidades li {
+    transition: transform 0.3s ease-in-out;
+}
+
+.habilidades li:hover {
+    transform: translate(5px, 5px);
+}
+
