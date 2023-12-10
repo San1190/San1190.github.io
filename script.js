@@ -16,18 +16,18 @@ function mostrarTexto() {
     if (index < texto.length) {
         parrafo1.innerHTML += texto.charAt(index);
         index++;
-        setTimeout(mostrarTexto, 50); // ajusta la velocidad de aparición
+        setTimeout(mostrarTexto, 50); 
     }
 }
 
-// Llama a la función cuando la ventana haya terminado de cargar
+
 window.onload = mostrarTexto;
 
 
 
 
 
-// Mueve elementos de la sección de habilidades al pasar el ratón
+
 const elementosMoviblesHabilidades = document.querySelectorAll('.habilidades li');
 
 elementosMoviblesHabilidades.forEach(elemento => {
@@ -41,7 +41,7 @@ elementosMoviblesHabilidades.forEach(elemento => {
 });
 
 
-// Mueve elementos de la sección de GitHub al pasar el ratón
+
 const elementosMoviblesGitHub = document.querySelectorAll('.github-activity .repo');
 
 elementosMoviblesGitHub.forEach(elemento => {
