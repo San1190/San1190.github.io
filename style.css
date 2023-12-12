@@ -28,6 +28,24 @@ h2 {
 
 
 
+.project-image {
+    animation: slideIn 1s ease-in-out;
+    
+}
+.project-image.in-view {
+    animation: slideIn 1s ease-in-out;
+    
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
 
 
 
@@ -99,7 +117,7 @@ h2 {
 
 .proyectos-metas h1 {
     text-align: center;
-    color: darkmagenta;
+    color:  #87CEEB;
 }
 
 .bot-section {
@@ -186,16 +204,16 @@ h2 {
     max-width: 30px; 
     margin-right: 10px;
 }
-/* Amplía la imagen al hacer clic */
+
 .imagen-ampliable.ampliada {
     max-width: 400px;
 }
 
-/* Agrega estilos para elementos movibles al pasar el ratón */
+
 .elemento-movible {
     transition: transform 0.3s ease-in-out;
 }
-/* Añade estilos para elementos movibles al pasar el ratón en la sección de habilidades */
+
 .habilidades li {
     transition: transform 0.3s ease-in-out;
 }
