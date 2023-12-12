@@ -1,11 +1,21 @@
+let rotacion = 0;
+let contador = 0;
 
-let rotacion = 0; 
 const imagen = document.querySelector('.descripcion-img img');
+const contadorElemento = document.getElementById('contador');
 
 imagen.addEventListener('click', () => {
-    rotacion += 360;  
+    rotacion += 360;
+    contador++;
+
+
+    const colorAleatorio = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+    contadorElemento.textContent = `Miau Flips: `;
+    contadorElemento.innerHTML += `<span style="color: ${colorAleatorio};">${contador}</span>`;
+
     imagen.style.transition = 'transform 0.5s';
-    imagen.style.transform = `rotate(${rotacion}deg)`;  
+    imagen.style.transform = `rotate(${rotacion}deg)`;
 });
 
 const texto = "Estudiante de Ingeniería Informática apasionado por la programación y desarrollo de software.";
@@ -24,6 +34,34 @@ function mostrarTexto() {
 window.onload = mostrarTexto;
 
 
+
+const botImages = document.querySelectorAll('.bot-image');
+
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+
+function handleScroll() {
+    botImages.forEach(image => {
+        if (isElementInViewport(image)) {
+            image.classList.add('animate'); 
+        }
+    });
+}
+
+
+window.addEventListener('scroll', handleScroll);
+
+
+handleScroll();
 
 
 
