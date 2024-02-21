@@ -1,52 +1,266 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>NavScroll</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="#css">CSS</a>
-            <a href="#html">HTML</a>
-            <a href="#js">JS</a>
-            <a href="#php">PHP</a>
-            <a href="#mysql">MySQL</a>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="imagenes/megu.png" type="image/x-icon">
+        <link rel="shortcut icon" href="imagenes/megu.png" type="image/x-icon">
+        <title>Santi - Ingeniero Informático</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    </head>
+    <body>
+        <!--<nav class="nave">
+            <div class="nave-container">
+                <a href="#" class="logo">Santi</a>
+                <div class="dropdowns">
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            <span>Proyectos</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button>Python</button>
+                            <button>C</button>
+                            <button>C++</button>
+                            <button>Java</button>
+                            <button>Haskell</button>
+                            <button>SQL</button>
+                            <button>HTML</button>
+                            <button>CSS</button>
+                            <button>JavaScript</button>
+                            <button>Prolog</button>
+                            <button>C#</button>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            <span>Codewars</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button>React</button>
+                            <button>Angular</button>
+                            <button>Vue</button>
+                            <button>Svelte</button>
+                            <button>Node</button>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            <span>Intereses</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button>Figma</button>
+                            <button>Adobe XD</button>
+                            <button>Photoshop</button>
+                            <button>Illustrator</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>-->
+
+      
+
+        <section class="descripcion">
+            <h2 id="tituloTexto">¡Hola! Soy Santi</h2>
+            <div class="descripcion-container">
+                <div class="descripcion-img">
+                    <img src="imagenes/megu.png" alt="Santi" id="imagenAmpliable" class="imagen-ampliable">
+                    <div id="contador">Miau Flips: 0</div>
+                </div>
+                <div class="descripcion-texto">
+                    <p id="parrafo1"></p>
+                    <p id="parrafo2"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="github-activity">
+            <h2>Actividad en GitHub</h2>
+            <p>Puedes encontrarme en GitHub como <a href="https://github.com/san1190" target="_blank">san1190</a>.</p>
+            <div class="repo">
+                <h3>Password Manager</h3>
+                <p>Un gestor de contraseñas seguro y confiable.</p>
+                <a href="https://github.com/San1190/Password-Manager" target="_blank">Ver en GitHub</a>
+            </div>
+            <div class="repo">
+                <h3>Proyectos de Andressance</h3>
+                <p>Explora los maravillosos proyectos de mi amigo Andressance.</p>
+                <a href="https://github.com/Andressance" target="_blank">GitHub de Andressance</a>
+                <div class="project-info">
+                    <h4>AikenConvertor</h4>
+                    <p>Un proyecto interesante que convierte formatos utilizando Aiken.</p>
+                    <a href="https://github.com/Andressance/AikenConvertor" target="_blank">Ver en GitHub</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="habilidades">
+            <h2>Mis Conocimientos y Habilidades</h2>
+            <p>Destaco en diversas áreas de la programación y la ingeniería informática.</p>
             
-        </nav>
+            <ul>
+                <li>
+                    <img src="imagenes/python.png" alt="Python">
+                    Python
+                </li>
+                <li>
+                    <img src="imagenes/C_Logo.png" alt="C">
+                    C
+                </li>
+                <li>
+                    <img src="imagenes/ISO_C++_Logo.svg.png" alt="C++">
+                    C++
+                </li>
+                <li>
+                    <img src="imagenes/java-logo-vector-1.svg" alt="Java">
+                    Java
+                </li>
+                <li>
+                    <img src="imagenes/haskell.png" alt="Haskell">
+                    Haskell
+                </li>
+                <li>
+                    <img src="imagenes/sql.png" alt="SQL">
+                    SQL
+                </li>
+                <li>
+                    <img src="imagenes/html.png" alt="HTML">
+                    HTML
+                </li>
+                <li>
+                    <img src="imagenes/css.png" alt="CSS">
+                    CSS
+                </li>
+                <li>
+                    <img src="imagenes/js.png" alt="JavaScript">
+                    JavaScript (en aprendizaje)
+                </li>
+                <li>
+                    <img src="imagenes/prolog.png" alt="Prolog">
+                    Prolog (en aprendizaje)
+                </li>
+                <li>
+                    <img src="imagenes/c-sharp-c-logo-02F17714BA-seeklogo.com.png" alt="C#">
+                    C# (en aprendizaje)
+                </li>
+            </ul>
+        </section>
+        
 
-    </header>
-    <section id="css">
-        <h1>CSS</h1>
-        <p>Cascading Style Sheets</p>
-    </section>
-    <section id="html">
-        <h1>HTML</h1>
-        <p>Hyper Text Markup Language</p>
+        <section class="proyectos-metas">
+            <h2>Proyectos y Metas</h2>
+            <p>Mis metas incluyen seguir aprendiendo y contribuir a proyectos significativos en el mundo de la programación.</p>
+        </section>
 
-    </section>
+        <section class="bloque-selec">
+            <h2>Bot de Discord Multifunción</h2>
+            <div class="bot-info">
+                <img src="imagenes/Bot.png" alt="Imagen del Bot" id="botImage" class="ampliable bot-image">
+                <p>Actualmente estoy trabajando junto a <a href="https://github.com/Andressance" target="_blank">Andressance</a> en un bot de Discord multifunción en <span style="color: #00d5ff;">Python</span>.
+                    Incluye comandos de <span style="color: #FF9AA2;">reacción</span>,
+                    <span style="color: #B39EB5;">automoderación</span>,
+                    <span style="color: #FFD700;">reproducción de música</span>,
+                    <span style="color: #FF6347;">gestión de roles</span>,
+                    entre otras características.
+                    Si quieres añadirlo a tu servidor, ¡pulsa <a href="https://discord.com/api/oauth2/authorize?client_id=1176859590214815774&permissions=8&scope=bot" target="_blank">aquí</a>!
+                </p>
+            </div>
+        </section>
 
-    <section id="js">
-        <h1>JS</h1>
-        <p>JavaScript</p>
+        <section class="bloque-selec">
+            <h2>Password Manager</h2>
+            <div class="bot-info">
+                <img src="imagenes/pm.jpeg" alt="Imagen del Password Manager" id="Password-ManagerImage" class="ampliable">
+                <p>Como he mencionado anteriormente, creé un organizador de contraseñas.
+                    Está escrito en <span style="color: #00d5ff;">Python</span> y utiliza  un <span style="color: #fb00ff;">archivo txt</span> 
+                    para almacenar las contraseñas a modo de base de datos, aunque en un futuro me gustaría implementar una base de datos <span style="color: #FF6347;">SQL</span>.
+                    Si quieres ver el código, ¡pulsa <a href="https://github.com/San1190/Password-Manager " target="_blank">aquí</a>!
+                </p>
+            </div>
+        </section>
 
-    </section>
+        <section class="bloque-selec">
+            <h2>GluTraductor</h2>
+            <div class="bot-info">
+                <img src="imagenes/pez.jpeg" alt="Imagen del GluTraductor" id="GluTraductorImage" class="ampliable">
+                <p>Este es un proyecto que comencé como una broma para hablar como un pez en Twitter, pero al final se convirtió en un proyecto realicé en <span style="color: #00d5ff;">Python</span> para traducir palabras del español al pez.
+                    Añadí la librería <span style="color: #fb00ff">TKinter</span> para crear una interfaz gráfica.
+                    Quise implementar más idiomas como el inglés, italiano, etc., que finalmente realicé con la API de <span style="color: #fb00ff;">Google Translate</span>.
+                    Finalmente, incluso añadí el aurebesh de Star Wars como lenguaje. Más adelante me gustaría implementar más idiomas y mejorar la interfaz gráfica. Cuando lo haga, lo publicaré en GitHub.
+                </p>
+            </div>
+        </section>
 
-    <section id="php">
-        <h1>PHP</h1>
-        <p>PHP: Hypertext Preprocessor</p>
+        <section class="redes-sociales">
 
-    </section>
+            <ul class="wrapper">
+          
+              <li class="icon twitter">
+          
+                <span class="tooltip">Twitter</span>
+          
+                <a href="https://twitter.com/San1190" target="_blank">
+          
+                  <span><i class="fab fa-twitter"></i></span>
+          
+                </a>
+          
+              </li>
+          
+              <li class="icon instagram">
+          
+                <span class="tooltip">Instagram</span>
+          
+                <a href="https://www.instagram.com/san1190_/" target="_blank">
+          
+                  <span><i class="fab fa-instagram"></i></span>
+          
+                </a>
+          
+              </li>
+          
+              <li class="icon github">
+          
+                <span class="tooltip">Github</span>
+          
+                <a href="https://github.com/San1190" target="_blank">
+          
+                  <span><i class="fab fa-github"></i></span>
+          
+                </a>
+          
+              </li>
+          
+              <li class="icon youtube">
+          
+                <span class="tooltip">Youtube</span>
+          
+                <a href="https://www.youtube.com/channel/UCw18ZI6ea8Fz7cpxgFM_qMw" target="_blank">
+          
+                  <span><i class="fab fa-youtube"></i></span>
+          
+                </a>
+          
+              </li>
+          
+            </ul>
+          
+          </section>
+          
 
-    <section id="mysql">
-        <h1>MySQL</h1>
-        <p>MySQL</p>
 
-    </section>
+        <footer>
+            <p>With ❤️ by San1190</p>
 
-
-
-</body>
-</html>
+        <script src="script.js"></script>
+    </body>
+    </html>
