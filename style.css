@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
-
 :root {
     --black: #373737;
     --sect-1: #ff9900;
@@ -34,9 +32,10 @@ nav {
     display: flex;
     text-align: center;
     transition: all 0.5s ease 0s;
+    display: block; /* Add this line */
 }
 
-a {
+nav a {
     width: 100%;
     z-index: 1;
     color: #fff;
@@ -49,11 +48,11 @@ a {
     border-bottom-width: 4px;
 }
 
-a:first-child {
+nav a:first-child {
     border-left-width: 0;
 }
 
-a:last-child {
+nav a:last-child {
     border-right-width: 0;
 }
 
