@@ -1,266 +1,577 @@
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="imagenes/megu.png" type="image/x-icon">
-        <link rel="shortcut icon" href="imagenes/megu.png" type="image/x-icon">
-        <title>Santi - Ingeniero Informático</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
-    </head>
-    <body>
-        <!--<nav class="nave">
-            <div class="nave-container">
-                <a href="#" class="logo">Santi</a>
-                <div class="dropdowns">
-                    <div class="dropdown">
-                        <button class="dropdown-button">
-                            <span>Proyectos</span>
-                            <i class="bi bi-chevron-down"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                            <button>Python</button>
-                            <button>C</button>
-                            <button>C++</button>
-                            <button>Java</button>
-                            <button>Haskell</button>
-                            <button>SQL</button>
-                            <button>HTML</button>
-                            <button>CSS</button>
-                            <button>JavaScript</button>
-                            <button>Prolog</button>
-                            <button>C#</button>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropdown-button">
-                            <span>Codewars</span>
-                            <i class="bi bi-chevron-down"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                            <button>React</button>
-                            <button>Angular</button>
-                            <button>Vue</button>
-                            <button>Svelte</button>
-                            <button>Node</button>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropdown-button">
-                            <span>Intereses</span>
-                            <i class="bi bi-chevron-down"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                            <button>Figma</button>
-                            <button>Adobe XD</button>
-                            <button>Photoshop</button>
-                            <button>Illustrator</button>
-                        </div>
-                    </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santi — Software Engineer</title>
+  <meta name="description" content="Portfolio de Santiago Fuentes Albuixech. Java, Spring Boot, Angular. Valencia, España.">
+  <link rel="icon" href="imagenes/megu.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo"><span class="green">~/</span>santi</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre-mi"><span class="green">01.</span> sobre_mi</a></li>
+        <li><a href="#experiencia"><span class="green">02.</span> experiencia</a></li>
+        <li><a href="#skills"><span class="green">03.</span> skills</a></li>
+        <li><a href="#proyectos"><span class="green">04.</span> proyectos</a></li>
+        <li><a href="#contacto" class="nav-cta">contacto<span class="blink-cursor">_</span></a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-grid">
+
+      <!-- Terminal principal -->
+      <div class="window hero-terminal" id="winHero">
+        <div class="win-bar" id="dragHero">
+          <div class="win-dots">
+            <span class="dot dot-r" title="No funciona 😅"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+          </div>
+          <span class="win-title-text">bash — santiago@upv:~</span>
+        </div>
+        <div class="win-body terminal-body">
+          <div class="term-block">
+            <p><span class="prompt">santiago@upv:~$</span> <span class="cmd">cat sobre_mi.txt</span></p>
+            <div id="termTyped" class="term-output"></div>
+          </div>
+          <div class="term-block">
+            <p><span class="prompt">santiago@upv:~$</span> <span class="cursor-term">█</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info lateral -->
+      <div class="hero-aside">
+        <div class="hero-name-block">
+          <h1>Santiago<br><span class="blue-text">Fuentes</span><br>Albuixech</h1>
+          <p class="hero-sub">Ing. Software · UPV · Valencia</p>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/San1190" target="_blank" class="hero-link">
+            <i class="fab fa-github"></i> github/San1190
+          </a>
+          <a href="https://linkedin.com/in/santiago-fuentes-albuixech" target="_blank" class="hero-link">
+            <i class="fab fa-linkedin"></i> linkedin
+          </a>
+          <a href="mailto:sanalfuen@gmail.com" class="hero-link">
+            <i class="fas fa-envelope"></i> sanalfuen@gmail.com
+          </a>
+        </div>
+        <div class="hero-btns">
+          <a href="#proyectos" class="btn btn-green">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-ghost">Hablamos</a>
+        </div>
+        <!-- Easter egg: el gato sigue aquí -->
+        <div class="cat-egg" id="catEgg" title="👀">
+          <img src="imagenes/megu.png" alt="megu" id="catImg">
+          <span id="catCounter" class="cat-counter hidden">Miau Flips: <strong id="catNum">0</strong></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SOBRE MÍ ===== -->
+  <section id="sobre-mi" class="section">
+    <div class="container">
+      <div class="window fade-in" id="winAbout">
+        <div class="win-bar" id="dragAbout">
+          <div class="win-dots">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          </div>
+          <span class="win-title-text">about.md</span>
+        </div>
+        <div class="win-body padded">
+          <div class="about-content">
+            <div class="about-text">
+              <h2 class="sec-title"><span class="green">#</span> Sobre mí</h2>
+              <p>
+                Soy de Valencia, estudiante de 4º de Informática en la UPV (especialidad Software)
+                y actualmente trabajando como ingeniero en prácticas en <span class="green">Visual Limes</span>,
+                una empresa de software sanitario donde toco código en producción real a diario.
+              </p>
+              <p>
+                Mi stack principal en el trabajo es <span class="blue-text">Java + Spring Boot + Vaadin</span>,
+                aunque en los proyectos personales me muevo más entre Python, TypeScript y Angular.
+                Me gusta tener claro lo que construyo y por qué, no solo copiar y pegar hasta que funcione.
+              </p>
+              <p>
+                Fuera del código: me interesan los videojuegos, tengo una perrito llamado Yui
+                y a veces hago cosas raras en Discord que acaban siendo proyectos de verdad.
+              </p>
+              <div class="about-meta">
+                <span><i class="fas fa-map-marker-alt green-icon"></i> Valencia, España</span>
+                <span><i class="fas fa-graduation-cap green-icon"></i> UPV · Ing. Informática</span>
+                <span><i class="fas fa-car green-icon"></i> Carnet B + vehículo</span>
+                <span class="available-badge"><i class="fas fa-circle"></i> Abierto a oportunidades</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCIA ===== -->
+  <section id="experiencia" class="section">
+    <div class="container">
+      <div class="window fade-in" id="winExp">
+        <div class="win-bar" id="dragExp">
+          <div class="win-dots">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          </div>
+          <span class="win-title-text">git log --oneline</span>
+        </div>
+        <div class="win-body padded">
+          <h2 class="sec-title"><span class="green">#</span> Experiencia &amp; Formación</h2>
+
+          <div class="git-log">
+
+            <div class="commit fade-in">
+              <div class="commit-left">
+                <span class="commit-dot active"></span>
+                <div class="commit-line"></div>
+              </div>
+              <div class="commit-card current">
+                <div class="commit-header">
+                  <span class="commit-hash green">a3f92c1</span>
+                  <span class="commit-date">Feb 2026 → Ahora</span>
                 </div>
-            </div>
-        </nav>-->
-
-      
-
-        <section class="descripcion">
-            <h2 id="tituloTexto">¡Hola! Soy Santi</h2>
-            <div class="descripcion-container">
-                <div class="descripcion-img">
-                    <img src="imagenes/megu.png" alt="Santi" id="imagenAmpliable" class="imagen-ampliable">
-                    <div id="contador">Miau Flips: 0</div>
+                <h3>Ingeniero de Software en Prácticas</h3>
+                <p class="commit-where blue-text">Visual Limes · Software Sanitario</p>
+                <ul class="commit-desc">
+                  <li>Desarrollo y mantenimiento con <strong>Java Swing, Vaadin y Spring Boot</strong> en producción</li>
+                  <li>Queries y optimización en <strong>MySQL / Firebird</strong> sobre datos clínicos reales</li>
+                  <li>Sprints, dailies y code reviews en equipo con metodología <strong>Scrum</strong></li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Vaadin</span>
+                  <span class="tag">MySQL</span><span class="tag">Firebird</span><span class="tag">Scrum</span>
                 </div>
-                <div class="descripcion-texto">
-                    <p id="parrafo1"></p>
-                    <p id="parrafo2"></p>
+              </div>
+            </div>
+
+            <div class="commit fade-in">
+              <div class="commit-left">
+                <span class="commit-dot"></span>
+                <div class="commit-line"></div>
+              </div>
+              <div class="commit-card">
+                <div class="commit-header">
+                  <span class="commit-hash green">d1e04ab</span>
+                  <span class="commit-date">2022 → 2026</span>
                 </div>
+                <h3>Grado en Ingeniería Informática</h3>
+                <p class="commit-where blue-text">Universitat Politècnica de València (UPV)</p>
+                <p class="commit-body">Especialidad en Ingeniería del Software. Todas las asignaturas superadas, solo me queda el TFG.
+                  Hice de todo: algoritmos, cloud, arquitectura, bases de datos, desarrollo web, gestión de proyectos...</p>
+              </div>
             </div>
-        </section>
 
-        <section class="github-activity">
-            <h2>Actividad en GitHub</h2>
-            <p>Puedes encontrarme en GitHub como <a href="https://github.com/san1190" target="_blank">san1190</a>.</p>
-            <div class="repo">
-                <h3>Password Manager</h3>
-                <p>Un gestor de contraseñas seguro y confiable.</p>
-                <a href="https://github.com/San1190/Password-Manager" target="_blank">Ver en GitHub</a>
-            </div>
-            <div class="repo">
-                <h3>Proyectos de Andressance</h3>
-                <p>Explora los maravillosos proyectos de mi amigo Andressance.</p>
-                <a href="https://github.com/Andressance" target="_blank">GitHub de Andressance</a>
-                <div class="project-info">
-                    <h4>AikenConvertor</h4>
-                    <p>Un proyecto interesante que convierte formatos utilizando Aiken.</p>
-                    <a href="https://github.com/Andressance/AikenConvertor" target="_blank">Ver en GitHub</a>
+            <div class="commit fade-in">
+              <div class="commit-left">
+                <span class="commit-dot"></span>
+              </div>
+              <div class="commit-card">
+                <div class="commit-header">
+                  <span class="commit-hash green">8b2fa19</span>
+                  <span class="commit-date">Verano 2024</span>
                 </div>
+                <h3>Operario de Producción</h3>
+                <p class="commit-where blue-text">Renner Spagna</p>
+                <p class="commit-body">Cadena de producción y logística. Aprendí que cumplir plazos bajo presión es lo mismo en cualquier sector.</p>
+              </div>
             </div>
-        </section>
 
+          </div>
 
-        <section class="habilidades">
-            <h2>Mis Conocimientos y Habilidades</h2>
-            <p>Destaco en diversas áreas de la programación y la ingeniería informática.</p>
-            
-            <ul>
-                <li>
-                    <img src="imagenes/python.png" alt="Python">
-                    Python
-                </li>
-                <li>
-                    <img src="imagenes/C_Logo.png" alt="C">
-                    C
-                </li>
-                <li>
-                    <img src="imagenes/ISO_C++_Logo.svg.png" alt="C++">
-                    C++
-                </li>
-                <li>
-                    <img src="imagenes/java-logo-vector-1.svg" alt="Java">
-                    Java
-                </li>
-                <li>
-                    <img src="imagenes/haskell.png" alt="Haskell">
-                    Haskell
-                </li>
-                <li>
-                    <img src="imagenes/sql.png" alt="SQL">
-                    SQL
-                </li>
-                <li>
-                    <img src="imagenes/html.png" alt="HTML">
-                    HTML
-                </li>
-                <li>
-                    <img src="imagenes/css.png" alt="CSS">
-                    CSS
-                </li>
-                <li>
-                    <img src="imagenes/js.png" alt="JavaScript">
-                    JavaScript (en aprendizaje)
-                </li>
-                <li>
-                    <img src="imagenes/prolog.png" alt="Prolog">
-                    Prolog (en aprendizaje)
-                </li>
-                <li>
-                    <img src="imagenes/c-sharp-c-logo-02F17714BA-seeklogo.com.png" alt="C#">
-                    C# (en aprendizaje)
-                </li>
-            </ul>
-        </section>
-        
-
-        <section class="proyectos-metas">
-            <h2>Proyectos y Metas</h2>
-            <p>Mis metas incluyen seguir aprendiendo y contribuir a proyectos significativos en el mundo de la programación.</p>
-        </section>
-
-        <section class="bloque-selec">
-            <h2>Bot de Discord Multifunción</h2>
-            <div class="bot-info">
-                <img src="imagenes/Bot.png" alt="Imagen del Bot" id="botImage" class="ampliable bot-image">
-                <p>Actualmente estoy trabajando junto a <a href="https://github.com/Andressance" target="_blank">Andressance</a> en un bot de Discord multifunción en <span style="color: #00d5ff;">Python</span>.
-                    Incluye comandos de <span style="color: #FF9AA2;">reacción</span>,
-                    <span style="color: #B39EB5;">automoderación</span>,
-                    <span style="color: #FFD700;">reproducción de música</span>,
-                    <span style="color: #FF6347;">gestión de roles</span>,
-                    entre otras características.
-                    Si quieres añadirlo a tu servidor, ¡pulsa <a href="https://discord.com/api/oauth2/authorize?client_id=1176859590214815774&permissions=8&scope=bot" target="_blank">aquí</a>!
-                </p>
+          <!-- Formación complementaria -->
+          <div class="extra-training">
+            <p class="extra-title"><span class="green">$</span> cat cursos.txt</p>
+            <div class="course-list">
+              <span><i class="fas fa-terminal green-icon"></i> Front-End con Angular (Udemy)</span>
+              <span><i class="fas fa-terminal green-icon"></i> Spring Boot y PrimeFaces (Udemy)</span>
+              <span><i class="fas fa-terminal green-icon"></i> Python para Data Science e IA (edX)</span>
+              <span><i class="fas fa-terminal green-icon"></i> IA Generativa y Prompt Engineering</span>
             </div>
-        </section>
+          </div>
 
-        <section class="bloque-selec">
-            <h2>Password Manager</h2>
-            <div class="bot-info">
-                <img src="imagenes/pm.jpeg" alt="Imagen del Password Manager" id="Password-ManagerImage" class="ampliable">
-                <p>Como he mencionado anteriormente, creé un organizador de contraseñas.
-                    Está escrito en <span style="color: #00d5ff;">Python</span> y utiliza  un <span style="color: #fb00ff;">archivo txt</span> 
-                    para almacenar las contraseñas a modo de base de datos, aunque en un futuro me gustaría implementar una base de datos <span style="color: #FF6347;">SQL</span>.
-                    Si quieres ver el código, ¡pulsa <a href="https://github.com/San1190/Password-Manager " target="_blank">aquí</a>!
-                </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="window fade-in" id="winSkills">
+        <div class="win-bar" id="dragSkills">
+          <div class="win-dots">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          </div>
+          <span class="win-title-text">skills.json</span>
+        </div>
+        <div class="win-body padded">
+          <h2 class="sec-title"><span class="green">#</span> Skills Técnicas</h2>
+          <div class="json-view">
+            <p class="json-brace">{</p>
+
+            <div class="json-block">
+              <p class="json-key">"lenguajes"<span class="json-colon">:</span> [</p>
+              <div class="skill-tags">
+                <span class="stag hot">Java</span>
+                <span class="stag hot">Python</span>
+                <span class="stag hot">TypeScript</span>
+                <span class="stag hot">JavaScript</span>
+                <span class="stag">C++</span>
+                <span class="stag">C#</span>
+                <span class="stag">C</span>
+              </div>
+              <p class="json-close">],</p>
             </div>
-        </section>
 
-        <section class="bloque-selec">
-            <h2>GluTraductor</h2>
-            <div class="bot-info">
-                <img src="imagenes/pez.jpeg" alt="Imagen del GluTraductor" id="GluTraductorImage" class="ampliable">
-                <p>Este es un proyecto que comencé como una broma para hablar como un pez en Twitter, pero al final se convirtió en un proyecto realicé en <span style="color: #00d5ff;">Python</span> para traducir palabras del español al pez.
-                    Añadí la librería <span style="color: #fb00ff">TKinter</span> para crear una interfaz gráfica.
-                    Quise implementar más idiomas como el inglés, italiano, etc., que finalmente realicé con la API de <span style="color: #fb00ff;">Google Translate</span>.
-                    Finalmente, incluso añadí el aurebesh de Star Wars como lenguaje. Más adelante me gustaría implementar más idiomas y mejorar la interfaz gráfica. Cuando lo haga, lo publicaré en GitHub.
-                </p>
+            <div class="json-block">
+              <p class="json-key">"frameworks_y_web"<span class="json-colon">:</span> [</p>
+              <div class="skill-tags">
+                <span class="stag hot">Spring Boot</span>
+                <span class="stag hot">Vaadin</span>
+                <span class="stag hot">Angular</span>
+                <span class="stag">Node.js</span>
+                <span class="stag">Java Swing</span>
+                <span class="stag">HTML5</span>
+                <span class="stag">CSS3</span>
+                <span class="stag">Tailwind</span>
+              </div>
+              <p class="json-close">],</p>
             </div>
-        </section>
 
-        <section class="redes-sociales">
+            <div class="json-block">
+              <p class="json-key">"bases_de_datos"<span class="json-colon">:</span> [</p>
+              <div class="skill-tags">
+                <span class="stag hot">MySQL</span>
+                <span class="stag hot">PostgreSQL</span>
+                <span class="stag">Firebird</span>
+                <span class="stag">MongoDB</span>
+              </div>
+              <p class="json-close">],</p>
+            </div>
 
-            <ul class="wrapper">
-          
-              <li class="icon twitter">
-          
-                <span class="tooltip">Twitter</span>
-          
-                <a href="https://twitter.com/San1190" target="_blank">
-          
-                  <span><i class="fab fa-twitter"></i></span>
-          
-                </a>
-          
-              </li>
-          
-              <li class="icon instagram">
-          
-                <span class="tooltip">Instagram</span>
-          
-                <a href="https://www.instagram.com/san1190_/" target="_blank">
-          
-                  <span><i class="fab fa-instagram"></i></span>
-          
-                </a>
-          
-              </li>
-          
-              <li class="icon github">
-          
-                <span class="tooltip">Github</span>
-          
-                <a href="https://github.com/San1190" target="_blank">
-          
-                  <span><i class="fab fa-github"></i></span>
-          
-                </a>
-          
-              </li>
-          
-              <li class="icon youtube">
-          
-                <span class="tooltip">Youtube</span>
-          
-                <a href="https://www.youtube.com/channel/UCw18ZI6ea8Fz7cpxgFM_qMw" target="_blank">
-          
-                  <span><i class="fab fa-youtube"></i></span>
-          
-                </a>
-          
-              </li>
-          
-            </ul>
-          
-          </section>
-          
+            <div class="json-block">
+              <p class="json-key">"herramientas"<span class="json-colon">:</span> [</p>
+              <div class="skill-tags">
+                <span class="stag hot">Git</span>
+                <span class="stag hot">Docker</span>
+                <span class="stag hot">Scrum</span>
+                <span class="stag">Azure</span>
+                <span class="stag">CI/CD</span>
+              </div>
+              <p class="json-close">],</p>
+            </div>
 
+            <div class="json-block">
+              <p class="json-key">"idiomas"<span class="json-colon">:</span> {</p>
+              <div class="lang-list">
+                <span class="lang-item"><span class="green">"español"</span>: <span class="blue-text">"nativo"</span>,</span>
+                <span class="lang-item"><span class="green">"inglés"</span>: <span class="blue-text">"B2"</span>,</span>
+                <span class="lang-item"><span class="green">"valenciano"</span>: <span class="blue-text">"B2"</span></span>
+              </div>
+              <p class="json-close">}</p>
+            </div>
 
-        <footer>
-            <p>With ❤️ by San1190</p>
+            <p class="json-brace">}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <script src="script.js"></script>
-    </body>
-    </html>
+  <!-- ===== PROYECTOS ===== -->
+  <section id="proyectos" class="section">
+    <div class="container">
+      <h2 class="sec-title standalone fade-in"><span class="green">#</span> Proyectos</h2>
+      <div class="projects-grid">
+
+        <!-- SolidarityHub -->
+        <div class="window project-win fade-in" id="winP1">
+          <div class="win-bar draggable-proj" id="dragP1">
+            <div class="win-dots">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            </div>
+            <span class="win-title-text">SolidarityHub/</span>
+            <span class="proj-featured">★ destacado</span>
+          </div>
+          <div class="win-body padded proj-body">
+            <div class="proj-icon"><i class="fas fa-hands-helping"></i></div>
+            <h3>SolidarityHub</h3>
+            <p>Aplicación full-stack para gestionar afectados y voluntarios en situaciones de emergencia.
+               API REST, autenticación y diseño responsive. Proyecto de 3º en la UPV que quedó bastante bien.</p>
+            <div class="tag-row">
+              <span class="tag">Java</span><span class="tag">Spring Boot</span>
+              <span class="tag">Vaadin</span><span class="tag">MySQL</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/San1190" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Neochitary -->
+        <div class="window project-win fade-in" id="winP2">
+          <div class="win-bar" id="dragP2">
+            <div class="win-dots">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            </div>
+            <span class="win-title-text">neochitary.py</span>
+          </div>
+          <div class="win-body padded proj-body">
+            <div class="proj-icon"><i class="fab fa-discord"></i></div>
+            <h3>Neochitary — Bot Discord</h3>
+            <p>Bot multifunción hecho con Python asíncrono: moderación, juegos, gestión de roles.
+               Empezó como un proyecto de finde y acabó gestionando comunidades de verdad.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Async</span><span class="tag">Discord API</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://discord.com/api/oauth2/authorize?client_id=1176859590214815774&permissions=8&scope=bot" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Añadir al servidor
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Webs a medida -->
+        <div class="window project-win fade-in" id="winP3">
+          <div class="win-bar" id="dragP3">
+            <div class="win-dots">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            </div>
+            <span class="win-title-text">webs_a_medida/</span>
+          </div>
+          <div class="win-body padded proj-body">
+            <div class="proj-icon"><i class="fas fa-globe"></i></div>
+            <h3>Webs a Medida</h3>
+            <p>Portfolios y sitios dinámicos para clientes. Angular + TypeScript + Tailwind.
+               SEO, responsive y atención al detalle en cada pixel.</p>
+            <div class="tag-row">
+              <span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/San1190" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Password Manager -->
+        <div class="window project-win fade-in" id="winP4">
+          <div class="win-bar" id="dragP4">
+            <div class="win-dots">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            </div>
+            <span class="win-title-text">password_manager.py</span>
+          </div>
+          <div class="win-body padded proj-body">
+            <div class="proj-icon"><i class="fas fa-lock"></i></div>
+            <h3>Password Manager</h3>
+            <p>Gestor de contraseñas en Python con interfaz TKinter. Fue uno de los primeros proyectos
+               serios que hice. Tiene sus años pero el código todavía me parece razonable.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">TKinter</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/San1190/Password-Manager" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="window fade-in" id="winContact">
+        <div class="win-bar" id="dragContact">
+          <div class="win-dots">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          </div>
+          <span class="win-title-text">contact.sh</span>
+        </div>
+        <div class="win-body padded contact-body">
+          <h2 class="sec-title"><span class="green">#</span> ¿Hablamos?</h2>
+          <div class="contact-term">
+            <p><span class="prompt">$</span> ./contactar.sh</p>
+            <p class="ct-desc">Si tienes una oportunidad interesante, quieres colaborar o simplemente
+              charlar de software, escríbeme. Respondo razonablemente rápido y sin robots.</p>
+            <div class="ct-actions">
+              <a href="mailto:sanalfuen@gmail.com" class="btn btn-green">
+                <i class="fas fa-envelope"></i> sanalfuen@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/San1190" target="_blank" class="soc-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/santiago-fuentes-albuixech" target="_blank" class="soc-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://twitter.com/San1190" target="_blank" class="soc-link"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://www.instagram.com/san1190_/" target="_blank" class="soc-link"><i class="fab fa-instagram"></i> Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Hecho con demasiado café por <span class="green">Santiago Fuentes Albuixech</span> · Valencia 2026</p>
+  </footer>
+
+  <!-- Matrix easter egg (Konami code: ↑↑↓↓←→←→BA) -->
+  <div id="matrixOverlay" class="matrix-overlay hidden">
+    <canvas id="matrixCanvas"></canvas>
+    <button id="closeMatrix" class="close-matrix">✕ salir</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>ing Boot</span>
+              <span class="tag">Vaadin</span><span class="tag">MySQL</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/San1190" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Neochitary -->
+        <div class="window project-win fade-in" id="winP2">
+          <div class="win-bar draggable-proj" id="dragP2">
+            <div class="win-dots">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            </div>
+            <span class="win-title-text">neochitary.py</span>
+          </div>
+          <div class="win-body padded proj-body">
+            <div class="proj-icon"><i class="fab fa-discord"></i></div>
+            <h3>Neochitary — Bot Discord</h3>
+            <p>Bot multifunción hecho con Python asíncrono: moderación, juegos, gestión de roles.
+               Empezó como un proyecto de finde y acabó gestionando comunidades de verdad.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Async</span><span class="tag">Discord API</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://discord.com/api/oauth2/authorize?client_id=1176859590214815774&permissions=8&scope=bot" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Añadir al servidor
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Webs a medida -->
+        <div class="window project-win fade-in" id="winP3">
+          <div class="win-bar draggable-proj" id="dragP3">
+            <div class="win-dots">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            </div>
+            <span class="win-title-text">webs_a_medida/</span>
+          </div>
+          <div class="win-body padded proj-body">
+            <div class="proj-icon"><i class="fas fa-globe"></i></div>
+            <h3>Webs a Medida</h3>
+            <p>Portfolios y sitios dinámicos para clientes. Angular + TypeScript + Tailwind.
+               SEO, responsive y atención al detalle en cada pixel.</p>
+            <div class="tag-row">
+              <span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/San1190" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Password Manager -->
+        <div class="window project-win fade-in" id="winP4">
+          <div class="win-bar draggable-proj" id="dragP4">
+            <div class="win-dots">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            </div>
+            <span class="win-title-text">password_manager.py</span>
+          </div>
+          <div class="win-body padded proj-body">
+            <div class="proj-icon"><i class="fas fa-lock"></i></div>
+            <h3>Password Manager</h3>
+            <p>Gestor de contraseñas en Python con interfaz TKinter. Fue uno de los primeros proyectos
+               serios que hice. Tiene sus años pero el código todavía me parece razonable.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">TKinter</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/San1190/Password-Manager" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="window fade-in" id="winContact">
+        <div class="win-bar" id="dragContact">
+          <div class="win-dots">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          </div>
+          <span class="win-title-text">contact.sh</span>
+        </div>
+        <div class="win-body padded contact-body">
+          <h2 class="sec-title"><span class="green">#</span> ¿Hablamos?</h2>
+          <div class="contact-term">
+            <p><span class="prompt">$</span> ./contactar.sh</p>
+            <p class="ct-desc">Si tienes una oportunidad interesante, quieres colaborar o simplemente charlar de software, escríbeme.
+              Respondo razonablemente rápido y sin robots.</p>
+            <div class="ct-actions">
+              <a href="mailto:sanalfuen@gmail.com" class="btn btn-green">
+                <i class="fas fa-envelope"></i> sanalfuen@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/San1190" target="_blank" class="soc-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/santiago-fuentes-albuixech" target="_blank" class="soc-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://twitter.com/San1190" target="_blank" class="soc-link"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://www.instagram.com/san1190_/" target="_blank" class="soc-link"><i class="fab fa-instagram"></i> Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Hecho con demasiado café por <span class="green">Santiago Fuentes Albuixech</span> · Valencia 2026</p>
+  </footer>
+
+  <!-- Konami easter egg overlay -->
+  <div id="matrixOverlay" class="matrix-overlay hidden">
+    <canvas id="matrixCanvas"></canvas>
+    <button id="closeMatrix" class="close-matrix">✕ salir</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
