@@ -14,6 +14,11 @@
 </head>
 <body>
 
+  <!-- ===== BOOT SEQUENCE ===== -->
+  <div id="bootScreen" class="boot-screen">
+    <div id="bootText" class="boot-text"></div>
+  </div>
+
   <!-- ===== NAV ===== -->
   <nav id="navbar">
     <div class="nav-inner">
@@ -50,8 +55,9 @@
             <p><span class="prompt">santiago@upv:~$</span> <span class="cmd">cat sobre_mi.txt</span></p>
             <div id="termTyped" class="term-output"></div>
           </div>
+          <div id="cmdHistory"></div>
           <div class="term-block">
-            <p><span class="prompt">santiago@upv:~$</span> <span class="cursor-term">█</span></p>
+            <p style="display: flex; align-items: center;"><span class="prompt">santiago@upv:~$</span> <input type="text" id="termInput" autocomplete="off" spellcheck="false" style="background:transparent;border:none;color:var(--text);font-family:var(--font-mono);font-size:0.88rem;outline:none;flex:1;caret-color:var(--green);" autofocus></p>
           </div>
         </div>
       </div>
@@ -59,7 +65,7 @@
       <!-- Info lateral -->
       <div class="hero-aside">
         <div class="hero-name-block">
-          <h1>Santiago<br><span class="blue-text">Fuentes</span><br>Albuixech</h1>
+          <h1 class="glitch" data-text="Santiago Fuentes Albuixech">Santiago<br><span class="blue-text">Fuentes</span><br>Albuixech</h1>
           <p class="hero-sub">Ing. Software · UPV · Valencia</p>
         </div>
         <div class="hero-links">
@@ -103,7 +109,7 @@
               <h2 class="sec-title"><span class="green">#</span> Sobre mí</h2>
               <p>
                 Soy de Valencia, estudiante de 4º de Informática en la UPV (especialidad Software)
-                y actualmente trabajando como ingeniero en prácticas en <span class="green">Visual Limes</span>,
+                y actualmente trabajando como <span class="blue-text">Ingeniero de Software</span> en <span class="green">Visual Limes</span>,
                 una empresa de software sanitario donde toco código en producción real a diario.
               </p>
               <p>

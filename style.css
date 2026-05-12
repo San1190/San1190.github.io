@@ -57,7 +57,9 @@ a { color: inherit; text-decoration: none; }
 
 /* ===== WINDOW COMPONENT ===== */
 .window {
-  background: var(--surface);
+  background: rgba(26, 26, 26, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.03);
@@ -142,11 +144,17 @@ a { color: inherit; text-decoration: none; }
 
 .nav-links a {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--muted);
-  transition: color var(--trans);
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  transition: all var(--trans);
 }
-.nav-links a:hover { color: var(--text); }
+.nav-links a:hover,
+.nav-links a.active { 
+  color: #ffffff; 
+}
+.nav-links a.active {
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+}
 .nav-links a span { color: var(--green); }
 
 .nav-cta {
@@ -786,4 +794,76 @@ footer p {
   .container { padding: 0 1rem; }
   .social-row { gap: 1rem; }
   .hero-btns { flex-direction: column; }
+}
+
+/* ===== BOOT SCREEN ===== */
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--green);
+  transition: opacity 0.5s ease;
+}
+.boot-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.boot-text p {
+  margin: 0.2rem 0;
+  opacity: 0;
+  animation: fadeInBoot 0.05s forwards;
+}
+@keyframes fadeInBoot {
+  to { opacity: 1; }
+}
+
+/* ===== GLITCH EFFECT ===== */
+.glitch {
+  position: relative;
+}
+.glitch:hover::before,
+.glitch:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.glitch:hover::before {
+  left: 2px;
+  text-shadow: -1px 0 red;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+.glitch:hover::after {
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(4px, 9999px, 86px, 0); }
+  20% { clip: rect(74px, 9999px, 14px, 0); }
+  40% { clip: rect(24px, 9999px, 93px, 0); }
+  60% { clip: rect(85px, 9999px, 12px, 0); }
+  80% { clip: rect(45px, 9999px, 76px, 0); }
+  100% { clip: rect(10px, 9999px, 55px, 0); }
+}
+@keyframes glitch-anim-2 {
+  0% { clip: rect(65px, 9999px, 100px, 0); }
+  20% { clip: rect(3px, 9999px, 20px, 0); }
+  40% { clip: rect(45px, 9999px, 60px, 0); }
+  60% { clip: rect(85px, 9999px, 90px, 0); }
+  80% { clip: rect(20px, 9999px, 40px, 0); }
+  100% { clip: rect(50px, 9999px, 70px, 0); }
 }
